@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<!--
+	Desarrollo de HTML y sus respectivas acciones.
+-->
+<html>
+
+<head>
+    <title>Conversor de Divisas</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <div id="header">
+
+        <div class="top">
+
+            <!-- Logo -->
+            <div id="logo">
+                <span class="image avatar48"><img src="images/logo.jpg" alt="" /></span>
+                <h1 id="title">Conversor De Divisas</h1>
+                <p>Derechos Reservados</p>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" id="inicio-link"><span class="icon solid fa-home">Inicio</span></a></li>
+                    <li><a href="#conversor" id="conversor-link"><span class="icon solid fa-th">Conversor</span></a></li>
+                    <li><a href="#desarrolladores" id="desarrolladores-link"><span class="icon solid fa-user">Desarrolladores</span></a></li>
+                    <li><a href="#contactanos" id="contactanos-link"><span class="icon solid fa-envelope">Contactanos</span></a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="bottom">
+
+            <!-- Social Icons -->
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+
+
+        <!-- Inicio -->
+        <section id="inicio" class="one dark cover">
+            <div class="container">
+                <header>
+                    <div class="slider">
+                        <div class="slider-wrapper flex">
+                            <div class="slide flex">
+                                <div class="slide-image slider-link prev"><img src="https://goranvrban.com/codepen/img2.jpg">
+                                    <div class="overlay"></div>
+                                </div>
+                                <div class="slide-content">
+                                    <div class="slide-date">Bienvenid@ estas dentro de nuestra pagina de Conversor de Divisas</div>
+                                    <div class="slide-title">Instrucciones y utilidad de nuestra pagina:</div>
+                                    <div class="slide-text">
+                                        <p>-Es importante realizar su registro (Login) para hacer uso de nuestra pagina.<br />
+                                            <p>-Brindar un nombre de usuario que sera necesario para tener acceso al conversor.<br />
+                                                <p>*El usuario procede a oprimir el boton "Ir al conversor" para dirigirse a este.<br />
+                                                    <p>*El usuario debe seleccionar el tipo de moneda y la cantidad necesaria para hacer la conversion.<br /></div>
+                                </div>
+                            </div>
+                            <div class="slide flex">
+                                <div class="slide-image slider-link next"><img src="https://goranvrban.com/codepen/img3.jpg">
+                                    <div class="overlay"></div>
+                                </div>
+                                <div class="slide-content">
+                                    <div class="slide-date">Los tipos de monedas que podrian convertirse son:</div>
+                                    <div class="slide-title">Euros, Dolares, Lempiras, Sol, Etc</p>
+                                        <div class="slide-more">OPRIME EL BOTON PARA HACER USO DE LA MAGIA DE NUESTRA PAGINA</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </header>
+
+                <footer>
+                    <a href="#conversor" class="button scrolly">Ir al conversor</a>
+                </footer>
+
+                </div>
+        </section>
+
+        <!-- Conversor -->
+        <section id="conversor" class="three">
+            <div class="container">
+
+                <header>
+
+                    <h2>Has tu cambio de moneda!!</h2>
+                    <!-- Required meta tags -->
+                    <meta charset="utf-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+                </header>
+
+                <p>
+
+                    <body>
+                        <main id="app" class="container">
+                            <form id="ConvForm">
+
+                                <h2>Ingrese su nombre</h2>
+                                <input type="text" id="newNAME"><br><br><br>
+
+                                <br>
+                                <div class="row">
+                                    <div style="height:200px; width:520px">
+                                        <select v-model="from" name="" id="" class="form-control">
+											<option v-for="moneda in formatearMonedas" :key="moneda.id" :value="moneda.id"> 
+												{{ moneda.currencyName }}
+											</option>
+										</select>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <select v-model="to" name="" id="" class="form-control">
+											<option v-for="moneda in formatearMonedas" :key="moneda.id" :value="moneda.id"> 
+												{{ moneda.currencyName }}
+											</option>
+										</select>
+                                    </div>
+
+                                </div>
+                                <div>
+                                    <div style="text-align: center;">
+                                        <input style="text-align: center;" id="newM1" v-model="cantidad" type="number" class="form-control my-5" placeholder="Ingrese cantidad">
+                                    </div>
+                                </div>
+                                <br>
+                                <div style="text-align: center;">
+                                    <div>
+                                        <button style="text-align: center;" class="btn btn-primary" type="submit" @click="convertirMonedas()" :disabled="desabilitado">Convertir</button>
+                                    </div>
+
+                                </div>
+                                <div style="text-align: center;">
+                                    <div class="col-sm-12 text-center">
+                                        <h2>{{ calcularResultado }}</h2>
+                                    </div>
+                                </div>
+                            </form>
+                        </main>
+                        <br> <br>
+                        <button id="getHistorial">
+							ver Historial
+						</button>
+                        <br> <br>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Cantidad Ingresada</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+
+
+                        <!-- Optional JavaScript -->
+                        <!-- VueJS, axios JS -->
+                        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+                        <script src="app.js"></script>
+                        <!--jQuery-->
+                        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+                        <!--App -->
+                        <script src="appp.js"></script>
+                        <script src="consul.js"></script>
+                    </body>
+                </p>
+
+
+
+            </div>
+        </section>
+
+
+        <!-- Desarrolladores -->
+        <section id="desarrolladores" class="four">
+            <div class="container">
+                <div class="row">
+                    <br>
+                    <div class="desarrolladores-link">
+                        <div class="container">
+                            <h2>Desarrolladores</h2>
+                        </div>
+                    </div>
+                    <div class="desarrolladores-link">
+                        <a class="im"><img src="images/jared.jpg" width="200" height="200" /></a>
+                        <div class="container">
+                            <h3>Jared Molina</h3>
+                            <small>Desallador Backend</small>
+                        </div>
+                    </div>
+                    <div class="desarrolladores-link">
+                        <a class="im"><img src="images/charlie.jpg" width="200" height="200" /></a>
+                        <div class="container">
+                            <h3>Carlos Torrento</h3>
+                            <small>Senior Manager</small>
+                        </div>
+                    </div>
+                    <div class="desarrolladores-link">
+                        <a class="im"><img src="images/pacheco.jpg" width="200" height="200" /></a>
+                        <div class="container">
+                            <h3>Oscar Guerra</h3>
+                            <small>CEO / Founder</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contactanos -->
+        <section id="contactanos" class="five">
+            <div class="container">
+
+                <header>
+                    <h2>Contactanos</h2>
+                </header>
+                <form id="Desarrolladores" method="post" action="#">
+                    <div class="row">
+                        <div class="col-6 col-12-mobile"><input type="text" id="nombre" name="Nombre" placeholder="Nombre" /></div>
+                        <div class="col-6 col-12-mobile"><input type="text" id="email" name="email" placeholder="Email" /></div>
+                        <div class="col-12">
+                            <textarea name="Mensaje" id="TxA" placeholder="Mensaje"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <input type="submit" value="Enviar Mensaje" />
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+
+            <!-- Copyright -->
+            <ul class="copyright">
+                <li>&copy; Todos los Derechos Reservados</li>
+                <li>Design: <a>Jared Molina, Carlos Torrento y Oscar Guerra</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
