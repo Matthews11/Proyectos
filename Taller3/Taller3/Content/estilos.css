@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+ 
+    .titulo{
+        font-size:40px;
+        width:50%;
+    }
+    .menu ul{
+        display:none;
+    }
+    .ima1{
+        display:none;
+    }
+
+    .selecciones{
+ display:none;  
+ }
+    
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+
+.contenedor1{
+    background-color:#ebebec;
+}
+
+
+.superior{
+    background-color:Highlight;
+    padding:0px  0px;
+}
+
+
+.ima1 {
+    height: 50px;
+    width: 100px;
+    margin-top:20px;
+    margin-right:10px;
+   float:right;
+}
+
+.titulo{
+    display:inline-block;
+    position:relative;
+    top:-10px;
+    left:10px;
+    width:15%;
+    color:white;
+    font-family: 'Staatliches', cursive;
+    font-size:40px;
+    text-align:center;
+}
+
+.menu{
+    display:inline-block;
+    width:54%;
+    position:relative;
+    top:10px;
+    left:40px;
+
+}
+
+ul{
+    
+    list-style: none;
+    margin: 5px;
+}
+
+.nav li a{
+    text-decoration: none;
+    padding: 10px 5px;
+    display: block;
+    
+}
+
+
+.nav > li {
+    padding: 10px 45px;
+    float: left;
+    cursor: pointer;
+    font-size:16px;
+} 
+
+.nav li:hover,.nav > li a:hover{
+    background-color: white;
+    color:black;
+    opacity: 0.95;
+    
+}
+
+
+.nav li ul{
+    background-color: #201717;
+    position: absolute;
+    display: none;
+    right: -5px;
+    min-width: 155px;
+ 
+}
+
+.nav li:hover > ul{ 
+    display: block;
+    color:black;
+    background-color: white;
+    color:black;
+}
+
+.nav li ul li{
+    position: relative;
+
+}
+
+.nav li ul li ul{
+    left: 150px;
+    top: -5px;
+}
+
+
+a:link, a:visited, a:active {
+    color:black;
+    text-decoration:none;
+    font-weight:600;
+}
+
+
+
+
+.selecciones a:link,.selecciones a:visited, .selecciones a:active {
+    color:black;
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    height:550px;
+}
+
+.nav img{
+    width:80px;
+    height:50px;
+}
+
+
+.selecciones{
+    margin-top:50px;
+    display:grid;
+   grid-template-columns: 25% 25% 25% 25%;
+  
+}
+.grid2{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.selecciones img{
+    width:80px;
+    height:70px;
+    text-align:center;
+}
+
+.Aula,.Repositorio,.Portal,.Biblioteca{
+    text-align:center;
+    font-family: 'Staatliches', cursive;
+    font-size:15px;
+    text-shadow:1px 1px 1px #808080;
+}
+
+.Aula:hover, .Repositorio:hover, .Portal:hover, .Biblioteca:hover {
+    background-color:white;
+    opacity:0.7;
+}
+
+h4,.vidio h1,.Noticias h1{
+    text-align:center;
+    font-size:60px;
+    margin-top:50px;
+
+}
+
+.Mision h3,.Vision h3,.Valores h3{
+    font-size:25px;
+    text-shadow:1px 1px 1px #808080;
+    text-align:center;
+}
+
+.Mision p,.Vision p,.Valores p{
+    margin:25px 25px;
+    text-align:justify;
+}
+
+.Mision:hover,.Vision:hover,.Valores:hover{
+    background-color:white;
+    opacity:0.7;
+}
+
+
+
+.grid2 img{
+ 
+    border-radius:10px;
+    margin-left:50px;
+    width:300px;
+    height:300px;
+}
+.ola{
+    width:100%;
+    display:block;
+}
+
+.vidio{
+    width:100%;
+    display:inline-block;
+    padding:20px;
+    text-align:center;
+}
+
+video{
+    width:80%;
+}
+
+
+footer{
+     background-color:Highlight;
+         height:150px;
+}
+
+footer h5{
+    font-size:30px;
+    font-family: 'Staatliches', cursive;
+    text-align:center;
+
+}
+ footer p{
+     font-size:15px;
+    font-family: 'Staatliches', cursive;
+    text-align:center;
+    height:100px;
+ }
+
+

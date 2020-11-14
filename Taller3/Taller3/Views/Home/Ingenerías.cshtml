@@ -1,0 +1,71 @@
+﻿
+@model List<Taller3.Models.ViewModel.Tablas>
+@{
+    ViewBag.Title = "Ingenerías";
+}
+
+
+<div class="contenedor1">
+
+    <div class="superior">
+        <h2 class="titulo">UDB Oficial</h2>
+
+        <nav class="menu">
+            <ul class="nav">
+                <li>@Html.ActionLink("Inicio ", "Index")</li>
+                <!-- Segundo li-->
+                <li>
+                    @Html.ActionLink("Listado de Carreras ", "Ingenerías")
+
+                    <!------------MENU DESPLEGABLE ---------->
+                    <ul>
+                        <!------------Primer menu desplegable ---------->
+                        <li>
+                        <li>@Html.ActionLink("Ingenería", "Ingenerías")</li>
+                        <li>@Html.ActionLink("Tecnicos", "Tecnicos")</li>
+                        <li>@Html.ActionLink("Profesorados ", "Profesorados")</li>
+                        <li>@Html.ActionLink("Licenciatura ", "Licenciatura")</li>
+                        <li>
+                            <!------------Fin del menu desplegable---------->
+                    </ul>
+                </li>
+
+                <li>@Html.ActionLink("Contactanos ", "Contactanos")</li>
+
+            </ul>
+        </nav>
+
+        <img class="ima1" src="http://www.udb.edu.sv/udb/public/img/logos/logo_ius_blanco.png" alt="">
+        </div>
+
+    <h4 class="titulo1">Ingenerías</h4>
+
+            <div class="ventas">
+
+
+                @foreach (var elemento in Model)
+            {
+                    <div class="prod1">
+                        <div class="txt">
+                            <div class="pre1"> @elemento.Nombre_de_la_Carrera<br> </div>
+                            <div class="pre2"> @elemento.Titulo_por_otorgar<br></div>
+                            <div class="pre3"><b> Objetivos: </b>@elemento.Objetivos<br></div>
+                            <div class="pre4"><b> Ofertada: </b>@elemento.Ofertada<br></div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+
+<footer>
+    <h5>UNIVERSIDAD DON BOSCO</h5>
+
+    <div class="piee">
+        <a href="https://www.facebook.com/UDBelsalvador" target="_blank"><img src="~/Content/face.svg"></a>
+        <a href="https://www.instagram.com/UDBelsalvador/" target="_blank"><img src="~/Content/ins.svg"></a>
+        <a href="https://twitter.com/UDBelsalvador" target="_blank"><img src="~/Content/twi.png"></a>
+    </div>
+    <p>© Derechos Reservados, 2020</p>
+
+</footer>

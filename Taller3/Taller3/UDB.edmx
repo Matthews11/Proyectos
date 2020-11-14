@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="UDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Contactanos">
+          <Key>
+            <PropertyRef Name="ID_Consultorio" />
+          </Key>
+          <Property Name="Correo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Queja" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Felicitación" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Consulta_de_inscripción" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Otra" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="ID_Consultorio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ingenierías">
+          <Key>
+            <PropertyRef Name="ID_Carrera" />
+          </Key>
+          <Property Name="nombre_de_carrera" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="titulo_por_otorgar" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="objetivos" Type="varchar" MaxLength="800" Nullable="false" />
+          <Property Name="ofertada" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ID_Carrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="licenciatura">
+          <Key>
+            <PropertyRef Name="ID_Carrera" />
+          </Key>
+          <Property Name="nombre_de_carrera" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="titulo_por_otorgar" Type="varchar" MaxLength="800" Nullable="false" />
+          <Property Name="objetivos" Type="varchar" MaxLength="1200" Nullable="false" />
+          <Property Name="ofertada" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ID_Carrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="profesorados">
+          <Key>
+            <PropertyRef Name="ID_Carrera" />
+          </Key>
+          <Property Name="nombre_de_carrera" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="titulo_por_otorgar" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="objetivos" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="ofertada" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ID_Carrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tecnicos">
+          <Key>
+            <PropertyRef Name="ID_Carrera" />
+          </Key>
+          <Property Name="nombre_de_carrera" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="titulo_por_otorgar" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="objetivos" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="ofertada" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ID_Carrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="UDBModelStoreContainer">
+          <EntitySet Name="Contactanos" EntityType="Self.Contactanos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ingenierías" EntityType="Self.ingenierías" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="licenciatura" EntityType="Self.licenciatura" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="profesorados" EntityType="Self.profesorados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tecnicos" EntityType="Self.tecnicos" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="UDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Contactanos">
+          <Key>
+            <PropertyRef Name="ID_Consultorio" />
+          </Key>
+          <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Queja" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Felicitación" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Consulta_de_inscripción" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Otra" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_Consultorio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="ingenierías">
+          <Key>
+            <PropertyRef Name="ID_Carrera" />
+          </Key>
+          <Property Name="nombre_de_carrera" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="titulo_por_otorgar" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="objetivos" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ofertada" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_Carrera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="licenciatura">
+          <Key>
+            <PropertyRef Name="ID_Carrera" />
+          </Key>
+          <Property Name="nombre_de_carrera" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="titulo_por_otorgar" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="objetivos" Type="String" MaxLength="1200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ofertada" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_Carrera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profesorados">
+          <Key>
+            <PropertyRef Name="ID_Carrera" />
+          </Key>
+          <Property Name="nombre_de_carrera" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="titulo_por_otorgar" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="objetivos" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ofertada" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_Carrera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="tecnicos">
+          <Key>
+            <PropertyRef Name="ID_Carrera" />
+          </Key>
+          <Property Name="nombre_de_carrera" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="titulo_por_otorgar" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="objetivos" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ofertada" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_Carrera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="UDBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Contactanos" EntityType="Self.Contactanos" />
+          <EntitySet Name="ingenierías" EntityType="Self.ingenierías" />
+          <EntitySet Name="licenciatura" EntityType="Self.licenciatura" />
+          <EntitySet Name="profesorados" EntityType="Self.profesorados" />
+          <EntitySet Name="tecnicos" EntityType="Self.tecnicos" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="UDBModelStoreContainer" CdmEntityContainer="UDBEntities1">
+          <EntitySetMapping Name="Contactanos">
+            <EntityTypeMapping TypeName="UDBModel.Contactanos">
+              <MappingFragment StoreEntitySet="Contactanos">
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Queja" ColumnName="Queja" />
+                <ScalarProperty Name="Felicitación" ColumnName="Felicitación" />
+                <ScalarProperty Name="Consulta_de_inscripción" ColumnName="Consulta_de_inscripción" />
+                <ScalarProperty Name="Otra" ColumnName="Otra" />
+                <ScalarProperty Name="ID_Consultorio" ColumnName="ID_Consultorio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ingenierías">
+            <EntityTypeMapping TypeName="UDBModel.ingenierías">
+              <MappingFragment StoreEntitySet="ingenierías">
+                <ScalarProperty Name="nombre_de_carrera" ColumnName="nombre_de_carrera" />
+                <ScalarProperty Name="titulo_por_otorgar" ColumnName="titulo_por_otorgar" />
+                <ScalarProperty Name="objetivos" ColumnName="objetivos" />
+                <ScalarProperty Name="ofertada" ColumnName="ofertada" />
+                <ScalarProperty Name="ID_Carrera" ColumnName="ID_Carrera" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="licenciatura">
+            <EntityTypeMapping TypeName="UDBModel.licenciatura">
+              <MappingFragment StoreEntitySet="licenciatura">
+                <ScalarProperty Name="nombre_de_carrera" ColumnName="nombre_de_carrera" />
+                <ScalarProperty Name="titulo_por_otorgar" ColumnName="titulo_por_otorgar" />
+                <ScalarProperty Name="objetivos" ColumnName="objetivos" />
+                <ScalarProperty Name="ofertada" ColumnName="ofertada" />
+                <ScalarProperty Name="ID_Carrera" ColumnName="ID_Carrera" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profesorados">
+            <EntityTypeMapping TypeName="UDBModel.profesorados">
+              <MappingFragment StoreEntitySet="profesorados">
+                <ScalarProperty Name="nombre_de_carrera" ColumnName="nombre_de_carrera" />
+                <ScalarProperty Name="titulo_por_otorgar" ColumnName="titulo_por_otorgar" />
+                <ScalarProperty Name="objetivos" ColumnName="objetivos" />
+                <ScalarProperty Name="ofertada" ColumnName="ofertada" />
+                <ScalarProperty Name="ID_Carrera" ColumnName="ID_Carrera" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tecnicos">
+            <EntityTypeMapping TypeName="UDBModel.tecnicos">
+              <MappingFragment StoreEntitySet="tecnicos">
+                <ScalarProperty Name="nombre_de_carrera" ColumnName="nombre_de_carrera" />
+                <ScalarProperty Name="titulo_por_otorgar" ColumnName="titulo_por_otorgar" />
+                <ScalarProperty Name="objetivos" ColumnName="objetivos" />
+                <ScalarProperty Name="ofertada" ColumnName="ofertada" />
+                <ScalarProperty Name="ID_Carrera" ColumnName="ID_Carrera" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,103 @@
+
+.titulo1{
+    margin:60px 0px;
+    font-size:60px;
+    text-align:center; 
+    font-family: 'Staatliches', cursive;
+}
+
+.titulo2{
+    margin:60px 0px 80px 0px;
+    font-size:60px;
+    text-align:center; 
+    font-family: 'Staatliches', cursive;
+}
+
+.ventas{
+
+    display:grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+
+.txt{
+
+}
+.pre1{
+    font-size:30px;
+    text-align:center;
+    font-family: 'Staatliches', cursive;
+}
+
+.pre2{
+
+    margin:20px 40px;
+    text-align:justify;
+}
+
+.pre3{
+    
+    margin:20px 40px;
+    text-align:justify;
+}
+
+.pre4{
+    
+    margin:40px;
+    font-size: 25px;
+    text-align:center;
+}
+
+
+.form1{
+
+   margin-top:50px;
+   width:25%;
+   margin:auto;
+}
+
+
+.form2{
+    display:block;
+    margin:auto;
+    width:100%;
+}
+
+.form3{
+    display:inline-block;
+    width:100%;
+    padding:5px 10px;
+}
+.vv{
+    margin-bottom:20px;
+    margin-top:10px;
+    text-align:;
+    font-size:20px;
+    color:Highlight;
+}
+
+.bton{
+    margin-top:20px;
+    margin-bottom:20px;
+    background-color:Highlight;
+    color:white;
+    border:solid 0.5px #000;
+    padding:10px;
+}
+
+
+.piee{
+    width:100%;
+    text-align:center;
+}
+
+.piee img{
+    width:35px;
+    height:35px;
+    margin:20px 30px;
+}
+
+#respon{
+    display:none;
+}
+

@@ -1,0 +1,147 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+}
+
+<div class="contenedor1">
+
+
+    <div class="superior">
+        <h2 class="titulo">UDB Oficial</h2>
+
+
+        <nav class="menu">
+            <ul class="nav">
+                <li>@Html.ActionLink("Inicio ", "Index")</li>
+                <!-- Segundo li-->
+                <li>
+                    @Html.ActionLink("Listado de Carreras ", "Ingenerías")
+
+                    <!------------MENU DESPLEGABLE ---------->
+                    <ul>
+                        <!------------Primer menu desplegable ---------->
+                        <li>
+                        <li>@Html.ActionLink("Ingenería", "Ingenerías")</li>
+                        <li>@Html.ActionLink("Tecnicos", "Tecnicos")</li>
+                        <li>@Html.ActionLink("Profesorados ", "Profesorados")</li>
+                        <li>@Html.ActionLink("Licenciatura ", "Licenciatura")</li>
+                        <li>                
+                            <!------------Fin del menu desplegable---------->
+                    </ul>
+                    </li>
+                    
+                <li>@Html.ActionLink("Contactanos ", "Contactanos")</li>
+               
+            </ul>
+        </nav>
+
+        <img class="ima1" src="http://www.udb.edu.sv/udb/public/img/logos/logo_ius_blanco.png" alt="">
+    </div>
+    </div>
+
+    <img src="http://www.udb.edu.sv/udb_files/recursos_banners/web/image/encabezado/JB68LMCU/67_bannerencabezado_gra_09223420200722.jpg" alt="Don Bosco">
+
+
+    <div class="selecciones">
+
+        <div class="Aula">
+            <a href="https://www.udbvirtual.edu.sv/auladigital/login/index.php" target="_blank">
+                <img src="http://www.udb.edu.sv/udb/public/img/iconos/aula-digital.png" alt="Aula digital">
+                <h3>Aula Digital</h3>
+            </a>
+        </div>
+        <div class="Portal">
+            <a href="https://admacad.udb.edu.sv/PortalWeb" target="_blank">
+                <img src="http://www.udb.edu.sv/udb/public/img/iconos/Servicios-academicos.png" alt="Portal Web">
+                <h3>Portal Web</h3>
+            </a>
+            
+        </div>
+        <div class="Biblioteca">
+            <a href="http://www.udb.edu.sv/udb/pagina/biblioteca" target="_blank">
+                <img src="http://www.udb.edu.sv/udb/public/img/iconos/biblioteca-UDB-2020.png" alt="Biblioteca">
+                <h3>Biblioteca</h3>
+            </a>
+        </div>
+        <div class="Repositorio">
+            <a href="http://rd.udb.edu.sv:8080/jspui/?locale=es" target="_blank">
+                <img src="http://www.udb.edu.sv/udb/public/img/iconos/repositorio-digital.png" alt="Editorial y Publicaciones">
+                <h3>Repositorio</h3>
+            </a>
+        </div>
+
+    </div>
+
+    <hr />
+
+    <h4>SOMOS UDB</h4>
+
+    <div class="grid2">
+
+        <div class="Mision">
+            <h3>Nuestra Misión</h3>
+            <p>Somos una institución de Educación Superior con carisma salesiano dedicada a la formación integral de la persona humana
+            , por medio de la investigación, la ciencia, la cultura, la tecnología, la innovación y el compromiso con la comunidad para
+             la construcción de una sociedad libre, justa y solidaria.</p>
+        </div>
+
+        <div class="Vision">
+            <h3>Nuestra Visión</h3>
+            <p>Una universidad salesiana, líder a nivel nacional y referente a nivel regional por su modelo educativo; 
+            reconocida por la innovación curricular; por el desarrollo profesional y la internacionalización de sus estudiantes, 
+            educadores y personal de gestión; por la ejecución de proyectos de investigación.</p>
+        </div>
+
+        <div class="Valores">
+            
+            <h3>Nuestros Ideales</h3>
+            <p>a Universidad Don Bosco es continuadora del esfuerzo iniciado por Don Bosco y que se orienta hacia la educación integral de los jóvenes.
+            El Ideario de la UDB es el conjunto de ideas, principios y criterios que de manera organizada, conforman su "ideal" o su "deber ser"; nace de la rica experiencia pedagógica.</p>
+        </div>
+      </div>
+
+    <h4>NOTICIAS</h4>
+
+    <div class="grid2">
+
+        <div class="Mision">
+            <h3>Entrega de Becas</h3>
+            <img src="http://www.udb.edu.sv/udb_files/recursos_noticias/1402/thumb.jpg" alt="Universidad Don Bosco entrega nuevas becas para que jóvenes continúen su formación profesional ">
+        </div>
+
+        <div class="Vision">
+            <h3>Apertura del corte</h3>
+            <img src="http://www.udb.edu.sv/udb_files/recursos_noticias/1378/thumb.jpg" alt="UDB apertura primera cohorte del Doctorado en Educación ">
+        </div>
+
+        <div class="Valores">
+
+            <h3>Estudiantes de Intercambio</h3>
+            <img src="http://www.udb.edu.sv/udb_files/recursos_noticias/1353/thumb.jpg" alt="Estudiantes de ortesis y prótesis de Colombia realizan intercambio en la UDB ">
+        </div>
+    </div>
+
+
+    <div class="ola">
+
+        <div class="vidio">
+            <h4>DIA DEL DOCENTE</h4>
+            <video controls>
+                <source src="~/fonts/video1.mp4" type="video/mp4">
+            </video>
+
+        </div>
+    </div>
+
+
+
+<footer>
+    <h5>UNIVERSIDAD DON BOSCO</h5>
+
+    <div class="piee">
+        <a href="https://www.facebook.com/UDBelsalvador" target="_blank"><img src="~/Content/face.svg"></a>
+        <a href="https://www.instagram.com/UDBelsalvador/" target="_blank"><img src="~/Content/ins.svg"></a>
+        <a href="https://twitter.com/UDBelsalvador" target="_blank"><img src="~/Content/twi.png"></a>
+    </div>
+    <p>© Derechos Reservados, 2020</p>
+
+</footer>

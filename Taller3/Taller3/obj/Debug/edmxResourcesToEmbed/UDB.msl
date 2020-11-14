@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UDBModelStoreContainer" CdmEntityContainer="UDBEntities1">
+    <EntitySetMapping Name="Contactanos">
+      <EntityTypeMapping TypeName="UDBModel.Contactanos">
+        <MappingFragment StoreEntitySet="Contactanos">
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Queja" ColumnName="Queja" />
+          <ScalarProperty Name="Felicitación" ColumnName="Felicitación" />
+          <ScalarProperty Name="Consulta_de_inscripción" ColumnName="Consulta_de_inscripción" />
+          <ScalarProperty Name="Otra" ColumnName="Otra" />
+          <ScalarProperty Name="ID_Consultorio" ColumnName="ID_Consultorio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ingenierías">
+      <EntityTypeMapping TypeName="UDBModel.ingenierías">
+        <MappingFragment StoreEntitySet="ingenierías">
+          <ScalarProperty Name="nombre_de_carrera" ColumnName="nombre_de_carrera" />
+          <ScalarProperty Name="titulo_por_otorgar" ColumnName="titulo_por_otorgar" />
+          <ScalarProperty Name="objetivos" ColumnName="objetivos" />
+          <ScalarProperty Name="ofertada" ColumnName="ofertada" />
+          <ScalarProperty Name="ID_Carrera" ColumnName="ID_Carrera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="licenciatura">
+      <EntityTypeMapping TypeName="UDBModel.licenciatura">
+        <MappingFragment StoreEntitySet="licenciatura">
+          <ScalarProperty Name="nombre_de_carrera" ColumnName="nombre_de_carrera" />
+          <ScalarProperty Name="titulo_por_otorgar" ColumnName="titulo_por_otorgar" />
+          <ScalarProperty Name="objetivos" ColumnName="objetivos" />
+          <ScalarProperty Name="ofertada" ColumnName="ofertada" />
+          <ScalarProperty Name="ID_Carrera" ColumnName="ID_Carrera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="profesorados">
+      <EntityTypeMapping TypeName="UDBModel.profesorados">
+        <MappingFragment StoreEntitySet="profesorados">
+          <ScalarProperty Name="nombre_de_carrera" ColumnName="nombre_de_carrera" />
+          <ScalarProperty Name="titulo_por_otorgar" ColumnName="titulo_por_otorgar" />
+          <ScalarProperty Name="objetivos" ColumnName="objetivos" />
+          <ScalarProperty Name="ofertada" ColumnName="ofertada" />
+          <ScalarProperty Name="ID_Carrera" ColumnName="ID_Carrera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tecnicos">
+      <EntityTypeMapping TypeName="UDBModel.tecnicos">
+        <MappingFragment StoreEntitySet="tecnicos">
+          <ScalarProperty Name="nombre_de_carrera" ColumnName="nombre_de_carrera" />
+          <ScalarProperty Name="titulo_por_otorgar" ColumnName="titulo_por_otorgar" />
+          <ScalarProperty Name="objetivos" ColumnName="objetivos" />
+          <ScalarProperty Name="ofertada" ColumnName="ofertada" />
+          <ScalarProperty Name="ID_Carrera" ColumnName="ID_Carrera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

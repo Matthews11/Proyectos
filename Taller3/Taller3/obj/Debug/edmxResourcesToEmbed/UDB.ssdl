@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Contactanos">
+    <Key>
+      <PropertyRef Name="ID_Consultorio" />
+    </Key>
+    <Property Name="Correo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Queja" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Felicitación" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Consulta_de_inscripción" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Otra" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ID_Consultorio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ingenierías">
+    <Key>
+      <PropertyRef Name="ID_Carrera" />
+    </Key>
+    <Property Name="nombre_de_carrera" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="titulo_por_otorgar" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="objetivos" Type="varchar" MaxLength="800" Nullable="false" />
+    <Property Name="ofertada" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ID_Carrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="licenciatura">
+    <Key>
+      <PropertyRef Name="ID_Carrera" />
+    </Key>
+    <Property Name="nombre_de_carrera" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="titulo_por_otorgar" Type="varchar" MaxLength="800" Nullable="false" />
+    <Property Name="objetivos" Type="varchar" MaxLength="1200" Nullable="false" />
+    <Property Name="ofertada" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ID_Carrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="profesorados">
+    <Key>
+      <PropertyRef Name="ID_Carrera" />
+    </Key>
+    <Property Name="nombre_de_carrera" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="titulo_por_otorgar" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="objetivos" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ofertada" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ID_Carrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tecnicos">
+    <Key>
+      <PropertyRef Name="ID_Carrera" />
+    </Key>
+    <Property Name="nombre_de_carrera" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="titulo_por_otorgar" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="objetivos" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ofertada" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ID_Carrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="UDBModelStoreContainer">
+    <EntitySet Name="Contactanos" EntityType="Self.Contactanos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ingenierías" EntityType="Self.ingenierías" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="licenciatura" EntityType="Self.licenciatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="profesorados" EntityType="Self.profesorados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tecnicos" EntityType="Self.tecnicos" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
